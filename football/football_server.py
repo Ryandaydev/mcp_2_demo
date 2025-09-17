@@ -1,10 +1,11 @@
 """
-FastMCP Football Server
+FastMCP Football Server (FastMCP 2.x)
 """
 
 import logging
+from typing import Any, Optional
+
 import httpx
-from typing import Any
 from fastmcp import FastMCP
 
 # Logging setup
@@ -49,3 +50,7 @@ async def get_counts() -> str:
         return "Unable to fetch counts."
 
     return format_count(data)
+
+#Added for MCP 2.x
+if __name__ == "__main__":
+    mcp.run()  # defaults to stdio; see docs for http/sse transports
