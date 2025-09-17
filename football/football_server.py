@@ -53,4 +53,4 @@ async def get_counts() -> str:
 
 #Added for MCP 2.x
 if __name__ == "__main__":
-    mcp.run()  # defaults to stdio; see docs for http/sse transports
+    mcp.run()  
